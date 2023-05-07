@@ -18,5 +18,5 @@ WORKDIR /code
 EXPOSE 8000
 
 # runs the production server
-ENTRYPOINT ["python", "mysite/manage.py"]
-CMD ["runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python3"] 
+CMD ["mysite/manage.py", "runserver", "0.0.0.0:8000"]

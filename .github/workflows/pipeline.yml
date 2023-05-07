@@ -21,7 +21,7 @@ env:
   GAR_LOCATION: us-central1 # TODO: update region of the Artifact Registry
   GKE_CLUSTER: mycluster    # TODO: update to cluster name
   GKE_ZONE: us-central1   # TODO: update to cluster zone
-  DEPLOYMENT_NAME: django # TODO: update to deployment name
+  DEPLOYMENT_NAME: django-app # TODO: update to deployment name
   REPOSITORY: django-app # TODO: update to Artifact Registry docker repository
   IMAGE: python-app
   TAG: 1.0.0
@@ -52,7 +52,7 @@ jobs:
       run: |-
         gcloud --quiet auth configure-docker
     
-    - name: Get GKE Credentials
+    - name: Install auth plugin
       run: |-
         gcloud components install gke-gcloud-auth-plugin
         

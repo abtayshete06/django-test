@@ -16,7 +16,7 @@ spec:
    spec:
      containers:
        - name: django-app-hello-world
-         image: gcr.io/$PROJECT_ID/$IMAGE:$TAG
+         image: gcr.io/PROJECT_ID/IMAGE:TAG
          imagePullPolicy: Always
          ports:
            - containerPort: 8080

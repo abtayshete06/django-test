@@ -51,6 +51,11 @@ jobs:
     - name: Configure Docker
       run: |-
         gcloud --quiet auth configure-docker
+    
+    - name: Get GKE Credentials
+      run: |-
+        gcloud components install gke-gcloud-auth-plugin
+        
     - name: Get GKE Credentials
       run: |-
         gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE"

@@ -58,8 +58,7 @@ jobs:
     # Build the Docker image
     - name: Build Docker Image
       run: |-
-        docker build \
-          --tag "gcr.io/$PROJECT_ID/$IMAGE:$TAG .
+        docker build --tag "gcr.io/$PROJECT_ID/$IMAGE:$TAG" .
         
     - name: Upload logs
       uses: actions/upload-artifact@v2

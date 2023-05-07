@@ -58,7 +58,7 @@ jobs:
     # Build the Docker image
     - name: Build Docker Image
       run: |-
-        docker build --tag "gcr.io/$PROJECT_ID/$IMAGE:$TAG" -f containers/app/Dockerfile .
+        docker build --tag "gcr.io/$PROJECT_ID/$IMAGE:$TAG" .
           .
     # Push the Docker image to Google Artifact Registry
     - name: Publish
